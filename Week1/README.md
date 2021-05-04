@@ -31,4 +31,9 @@ b) By having a trait class that both Text and Plaintext inherit from, we can cha
 c) Due to the use of composition instead of inheritance, the code is no longer exposed to the fragile base class problem and has looser coupling. However, we have to add more methods since we don't have access to the private variables in the Text class.  
 
 ## Question 7  
-Q7.scala contains a rectangle class with custom equals and hashCode functions, along with a test suite for them.
+Q7.scala contains a rectangle class with custom equals and hashCode functions, along with a test suite for them. Please compile and run with the following command:  
+
+> scala org.scalatest.run Q7 
+
+All test should pass except the final one.
+
