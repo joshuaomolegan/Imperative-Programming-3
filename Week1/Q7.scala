@@ -23,7 +23,7 @@ class Q7 extends FunSuite{
     // if r1 == r2 then r2 == r1a should be true as it is identical to r1 but is a refernece of type Any. The given == function fails this part of the test
     test("Equality test between Rectangle and Any"){assert(r1 === r1a); assert((r1 === r2) && (r2 === r1a))} 
 
-    // If r1 is in the hashset and r1 == r2, rect_set.contains(r2) should be true. Hashcode was also not changed. The given == function fails this test.
+    // If r1 is in the hashset and r1 == r2, rect_set.contains(r2) should be true. The given == function fails this test.
     test("Hashset contains test"){assert(rect_set.contains(r1)); assert(rect_set.contains(r2))}
 
     // Defining == in terms of mutable fields also causes issues in hash sets if one of the fields is updated. It causes the hashcode to change and so we won't find the object
