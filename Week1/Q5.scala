@@ -5,18 +5,18 @@ class Ellipse(private var _a: Int, private var _b: Int) {
     def b = _b
     def b_=(new_b: Int) = {_b = new_b}
 
-    // Doesn't need to be overwritten because new "a_=" and "b_=" methods in LoggedEllipse are used, so num_increases is increased appropriately
+    // Doesn't need to be overwritten as it is independent of any particular implementation
     def swap = {
         val tmp = _a
-        a = _b
-        b = tmp
+        _a = _b
+        _b = tmp 
     }
 
     // Needs to be overwritten
     def swap2 = {
         val tmp = _a
-        _a = _b
-        _b = tmp 
+        a = _b
+        b = tmp
     }
 }
 
