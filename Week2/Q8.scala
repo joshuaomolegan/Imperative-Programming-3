@@ -20,18 +20,15 @@ object Q_Text extends org.scalacheck.Properties("Text") {
 	property("delete at start") =
 		forAll { (s: String) =>
 			val t = new Text(s); t.deleteRange(0, s.length)
-			t.toString() == ""
-		}
+			t.toString() == ""}
 		  
 	property("delete at end") =
 		forAll { (s1: String, s2: String) =>
 			val t = new Text(s1 + s2); t.deleteRange(s1.length, s2.length)
-			t.toString() == s1
-		}
+			t.toString() == s1}
 		
 	property("delete in the middle") =
 		forAll { (s1: String, s2: String, s3: String) =>
 			val t = new Text(s1 + s3 + s2); t.deleteRange(s1.length, s3.length)
-			t.toString() == s1 + s2
-		}
+			t.toString() == s1 + s2}
 }
